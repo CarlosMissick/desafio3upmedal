@@ -1,0 +1,28 @@
+:global(.vtex-sticky-layout-0-x-container--sticky-header) {
+    background: #212121;
+  }
+  .searchBarContainer{
+    width: 770px;
+  }
+  .searchBarContainer :global(.vtex-input-prefix__group){
+    border:none;
+    border-radius: 0;
+    border-bottom: thin solid white;
+  }
+  .searchBarContainer :global(.vtex-input__sufix){
+  background:rgb(20, 20, 20); ;
+  }
+  .searchBarContainer :global(.vtex-styleguide-9-x-input){
+    background: transparent;
+    color:#59FF00;
+ }
+  .searchBarContainer :global(.vtex-store-components-3-x-searchBarIcon) {
+    color:#59FF00;
+    }
+    :global(.vtex-product-summary-2-x-element){
+        background: #212121;
+    }
+    :global(.vtex-product-summary-2-x-buyButton){
+        background-color: #59FF00;
+        color:#59FF00
+    }

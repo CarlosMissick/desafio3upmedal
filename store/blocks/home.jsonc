@@ -1,0 +1,116 @@
+{
+  "store.home": { 
+    "blocks": [
+      "slider-layout#home",
+      //"list-context.product-list"
+      "search-result-layout.customQuery#home"
+
+    
+      
+    ]
+  },
+"slider-layout#home" : {
+
+"props": {
+  "itemsPerPage":{
+    "desktop":1,
+    "mobile":1,
+    "tablet":1
+  },
+  "autoplay": {
+    "timeout": 1000,
+    "stopOnHover": true
+  },
+    "showNavigationArrows": "always",
+    "fullWidth": false
+
+  },
+  "children": ["image#home1","image#home2"]
+},
+
+  "image#home1": {
+"props": {
+  "src": "assets/BANNER-WOOD.png",
+"link": "https://carlosmissick--hiringcoders2021.myvtex.com/triplicecoroa/p/"
+}
+},
+"image#home2":{
+  "props": {
+    "src": "assets/BANNER-2.png"
+  
+  }
+},
+//"list-context.product-list": {
+     //"blocks": ["product-summary.shelf#home"],
+     //"children": ["slider-layout"]
+     
+   //},
+   //"product-summary.shelf#home": {
+     //"children": [
+       //"product-summary-name",
+       //"product-selling-price"
+       
+     //]
+   //}
+   "search-result-layout.customQuery#home": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#home",
+      "search-result-layout.mobile"
+      
+    ]
+  },
+  "search-result-layout.desktop#home": {
+    "children": [
+      //"flex-layout.row#searchbread",
+      //"flex-layout.row#searchtitle",
+      "flex-layout.row#result"
+    ]
+    },
+    "flex-layout.row#result": {
+      "children": [
+        "search-content#home"
+      ]
+    },
+    "search-content#home":{
+      "blocks":[
+        "gallery", "not-found"
+      ]
+    },
+    "gallery": {
+      "props": {
+        "layouts": [
+          {
+            "name": "home",
+            "component": "HomeSummary",
+            "itemsPerRow": 2
+          }
+        ],
+        "HomeSummary": "product-summary.shelf#home"
+        }
+      },
+      "product-summary.shelf#home":{
+        "children":[
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-image",
+      "product-summary-price",
+      "product-summary-buy-button"
+        ]
+      }
+
+}
+  
+
+
+
+
+
+
+  
+  
